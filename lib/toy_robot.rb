@@ -1,8 +1,5 @@
 $LOAD_PATH << '.'
 
-require 'north'
-require 'east'
-
 class ToyRobot
   def initialize
     @coordinate = []
@@ -11,7 +8,7 @@ class ToyRobot
   def read_input
     input_file = File.open("input.txt", "r")
 
-    input_file.each do |i|
+    input_file.map do |i|
       if i.include? "PLACE"
         input = i.split(" ")[1].split(",")
        @coordinate = place(input)

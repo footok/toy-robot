@@ -14,9 +14,9 @@ class ToyRobot
         input = i.split(' ')[1].split(',')
         @coordinate = place(input)
       elsif i.include? 'Report'
-        puts @coordinate
+        p @coordinate
       else
-        check_input(i.delete("\n"))
+        check_input(i.delete('\n'))
       end
     end
   end

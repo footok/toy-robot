@@ -1,5 +1,4 @@
 class ReportHandler
-  attr_accessor :robot_coordinate
 
   def initialize(coordinate)
     @coordinate = coordinate
@@ -7,5 +6,6 @@ class ReportHandler
 
   def execute
     puts @coordinate.report
+    @coordinate.report
   end
 end

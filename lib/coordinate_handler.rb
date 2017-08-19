@@ -6,10 +6,14 @@ class CoordinateHandler
   end
 
   def report
-    puts @robot_coordinate
+    if exists
+      @robot_coordinate
+    else
+      puts 'Robot has not placed yet'
+    end
   end
 
-  def placed?
+  def exists
     !@robot_coordinate.nil?
   end
 end

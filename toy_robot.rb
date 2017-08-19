@@ -2,6 +2,8 @@ require_relative 'lib/input_handler'
 require_relative 'lib/place_handler'
 require_relative 'lib/coordinate_handler'
 require_relative 'lib/report_handler'
+require_relative 'lib/move_handler'
+require_relative 'lib/left_handler'
 
 class ToyRobot
 

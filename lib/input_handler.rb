@@ -12,8 +12,11 @@ class InputHandler
       move = MoveHandler.new(@coordinate)
       move.execute
     elsif input == 'LEFT'
-      move = LeftHandler.new(@coordinate)
-      move.execute
+      left = LeftHandler.new(@coordinate)
+      left.execute
+    elsif input == 'RIGHT'
+      right = LeftHandler.new(@coordinate)
+      right.execute
     elsif input == 'REPORT'
       report = ReportHandler.new(@coordinate)
       report.execute

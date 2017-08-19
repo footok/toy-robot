@@ -8,7 +8,13 @@ class InputHandler
     if input.include? 'PLACE'
       place = PlaceHandler.new(@coordinate)
       place.parse(input)
-    elsif input.include? 'REPORT'
+    elsif input == 'MOVE'
+      move = MoveHandler.new(@coordinate)
+      move.execute
+    elsif input == 'LEFT'
+      move = LeftHandler.new(@coordinate)
+      move.execute
+    elsif input == 'REPORT'
       report = ReportHandler.new(@coordinate)
       report.execute
     end

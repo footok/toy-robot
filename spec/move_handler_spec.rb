@@ -15,6 +15,30 @@ describe MoveHandler do
       move_handler.execute
       expect(report_handler.execute).to eql([0, 1, 'NORTH'])
     end
+
+    it 'does not move robot when the robot is facing SOUTH and y is 0' do
+      place_handler.place_robot(0, 0, 'SOUTH')
+      move_handler.execute
+      expect(report_handler.execute).to eql([0, 0, 'SOUTH'])
+    end
+
+    it 'does not move robot when the robot is facing WEST and x is 0' do
+      place_handler.place_robot(0, 0, 'WEST')
+      move_handler.execute
+      expect(report_handler.execute).to eql([0, 0, 'WEST'])
+    end
+
+    it 'does not move robot when the robot is facingc NORTH and y is 5' do
+      place_handler.place_robot(5, 5, 'NORTH')
+      move_handler.execute
+      expect(report_handler.execute).to eql([5, 5, 'NORTH'])
+    end
+
+    it 'does not move robot when the robot is facingc EAST and x is 5' do
+      place_handler.place_robot(5, 5, 'EAST')
+      move_handler.execute
+      expect(report_handler.execute).to eql([5, 5, 'EAST'])
+    end
   end
 
   describe '#coordinate_valid' do

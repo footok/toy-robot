@@ -5,7 +5,6 @@ class ReportHandler
   end
 
   def execute
-    puts @coordinate.report
-    @coordinate.report
+    p @coordinate.report
   end
 end

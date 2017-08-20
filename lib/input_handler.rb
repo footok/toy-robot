@@ -15,11 +15,13 @@ class InputHandler
       left = LeftHandler.new(@coordinate)
       left.execute
     elsif input == 'RIGHT'
-      right = LeftHandler.new(@coordinate)
+      right = RightHandler.new(@coordinate)
       right.execute
     elsif input == 'REPORT'
       report = ReportHandler.new(@coordinate)
       report.execute
+    else
+      puts 'Invalid command: Please try again'
     end
   end
 end

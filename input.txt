@@ -1,6 +1,0 @@
-Move
-PLACE 2,2,North
-Move
-Right
-Move
-Report

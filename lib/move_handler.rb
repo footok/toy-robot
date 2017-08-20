@@ -25,11 +25,11 @@ class MoveHandler
     if f == 'NORTH'
       y < 5
     elsif f == 'SOUTH'
-      y >= 0
+      y > 0
     elsif f == 'EAST'
       x < 5
     elsif f == 'WEST'
-      x >= 5
+      x > 0
     end
   end
 end

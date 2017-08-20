@@ -14,7 +14,7 @@ describe ReportHandler do
     end
 
     it 'returns nil when coordinate is nil' do
-      expect(report_handler.execute).to eql nil
+      expect(report_handler.execute).to eql('Robot has not placed yet')
     end
   end
 end

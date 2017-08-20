@@ -13,8 +13,7 @@ describe CoordinateHandler do
     end
 
     it 'prints message when coordinate is not exists' do
-      expected_report = "Robot has not placed yet\n"
-      expect { coordinate.report }.to output(expected_report).to_stdout
+      expect(coordinate.report).to eql('Robot has not placed yet')
     end
   end
 end

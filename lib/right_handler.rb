@@ -10,11 +10,8 @@ class RightHandler
     coordinate = @coordinate.robot_coordinate
     if @coordinate.exists
       current_direction = coordinate[2]
-
-      if @coordinate.exists
-        new_direction = DIRECTIONS[(DIRECTIONS.index(current_direction) + 1) % 4]
-        coordinate[2] = new_direction
-      end
+      new_direction = DIRECTIONS[(DIRECTIONS.index(current_direction) + 1) % 4]
+      coordinate[2] = new_direction
     end
   end
 end

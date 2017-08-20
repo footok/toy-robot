@@ -20,6 +20,8 @@ class InputHandler
     elsif input == 'REPORT'
       report = ReportHandler.new(@coordinate)
       report.execute
+    elsif input == 'EXIT'
+      puts 'Exiting toy robot. Thank you.'
     else
       puts 'Invalid command: Please try again'
     end

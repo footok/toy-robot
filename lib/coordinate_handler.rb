@@ -3,13 +3,14 @@ class CoordinateHandler
 
   def initialize
     @robot_coordinate = nil
+    @empty_coordinate_message = "Robot has not placed yet"
   end
 
   def report
     if exists
       @robot_coordinate
     else
-      puts 'Robot has not placed yet'
+      @empty_coordinate_message
     end
   end
 

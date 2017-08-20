@@ -8,6 +8,14 @@ Install gem dependencies with Bundle:
 $ bundle install
 ```
 
+## How to run
+Enter this command in your terminal to run toy_robot.rb.
+
+Then type commands, like `place 0, 0, north` or `left` to move the robot around the table.
+```
+$ ruby toy_robot.rb
+```
+
 ## Testing
 Run tests:
 ```

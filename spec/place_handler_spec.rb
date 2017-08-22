@@ -27,4 +27,28 @@ describe PlaceHandler do
       expect(place_handler.place_robot(2, 3, 'NORTH')).to eql([2, 3, 'NORTH'])
     end
   end
+
+  describe '#check_coordinate_validation' do
+    context 'checks validity of place' do
+      it 'returns true when input coordinate is correct' do
+        expect(place_handler.check_coordinate_validation(['PLACE', '2', '3', 'NORTH'])).to eql true
+      end
+
+      it 'returns true when input coordinate is correct' do
+        expect(place_handler.check_coordinate_validation(['PLACE', '5', '5', 'NORTH'])).to eql true
+      end
+
+      it 'returns false when input coordinate is not correct' do
+        expect(place_handler.check_coordinate_validation(['PLACE', '6', '3', 'NORTH'])).to eql false
+      end
+
+      it 'returns false when input coordinate is not correct' do
+        expect(place_handler.check_coordinate_validation(['PLACE', '6', '8', 'FOO'])).to eql false
+      end
+
+      it 'returns false when input coordinate is not correct' do
+        expect(place_handler.check_coordinate_validation(['PLACE', '0', '-1', 'FOO'])).to eql false
+      end
+    end
+  end
 end

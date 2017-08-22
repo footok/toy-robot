@@ -76,6 +76,15 @@ describe InputHandler do
       end
     end
 
+    context 'when input is EXIT' do
+      input = 'EXIT'
+
+      it 'prints invalid command message' do
+        exit_message = "Exiting toy robot. Thank you.\n"
+        expect { input_handler.parse(input) }.to output(exit_message).to_stdout
+      end
+    end
+
     context 'when input is invalid' do
       input = 'invalid'
 
